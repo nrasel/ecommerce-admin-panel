@@ -19,13 +19,40 @@ body {
 }
 
 .logo {
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
+  height: 64px;
+  margin: 0;
+  background: #ffd333;
 }
 .ant-layout .ant-layout-header {
   background-color: white;
 }
 .ant-layout {
   min-height: 100vh;
+}
+.ant-layout-sider {
+  flex: 0 0 250px !important;
+  max-width: 250px !important;
+  min-width: 250px !important;
+  width: 250px !important;
+}
+.ant-layout-sider-collapsed {
+  flex: 0 0 80px !important;
+  max-width: 80px !important;
+  min-width: 80px !important;
+  width: 80px !important;
+}
+.sm-logo {
+  display: none;
+}
+.ant-layout-sider-collapsed .sm-logo {
+  display: block;
+}
+.ant-layout-sider-collapsed .lg-logo {
+  display: none;
+}
+.main {
+  overflow-y: scroll;
+}
+.ant-menu-title-content {
+  font-size: 16px;
 }

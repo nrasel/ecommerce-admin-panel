@@ -15,6 +15,7 @@ import {
   FaMicroblog,
 } from "react-icons/fa";
 import { ImBlogger2 } from "react-icons/im";
+import { RiQuestionFill } from "react-icons/ri";
 import { SiBloglovin } from "react-icons/si";
 import { TbBrandAdobe } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +27,12 @@ const MainLayout = () => {
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="logo" />
+        <div className="logo">
+          <h2 className="text-white fs-5 text-center py-3 mb-0">
+            <span className="sm-logo">PE</span>
+            <span className="lg-logo">PandaE</span>
+          </h2>
+        </div>
         <Menu
           theme="dark"
           mode="inline"
@@ -128,9 +134,12 @@ const MainLayout = () => {
                 },
               ],
             },
+            {
+              key: "enquries",
+              icon: <RiQuestionFill className="fs-5" />,
+              label: "Enquries",
+            },
           ]}
-          
-         
         />
       </Sider>
       <Layout className="site-layout">
