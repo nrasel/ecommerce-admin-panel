@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./components/MainLayout";
+import AddBlog from "./pages/AddBlog";
 import BlogCatList from "./pages/BlogCatList";
 import BlogList from "./pages/BlogList";
 import BrandList from "./pages/BrandList";
@@ -33,6 +34,7 @@ function App() {
           <Route path="list-category" element={<CategoryList />} />
           <Route path="brand-list" element={<BrandList />} />
           <Route path="product-list" element={<ProductList />} />
+          <Route path="blog-add" element={<AddBlog />} />
         </Route>
       </Routes>
     </Router>
