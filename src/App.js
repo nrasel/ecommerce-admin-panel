@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./components/MainLayout";
 import Dashboard from "./pages/Dashboard";
+import Enquries from "./pages/Enquries";
 import ForgotPassword from "./pages/ForgotPassword";
 import Login from "./pages/Login";
 import ResetPassword from "./pages/ResetPassword";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/forgot-pass" element={<ForgotPassword />} />
         <Route path="/admin" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="enquries" element={<Enquries />} />
         </Route>
       </Routes>
     </Router>

@@ -71,13 +71,13 @@ const MainLayout = () => {
                   label: "Product List",
                 },
                 {
-                  key: "category",
+                  key: "brand",
                   icon: <TbBrandAdobe className="fs-5" />,
                   label: "Brand",
                 },
 
                 {
-                  key: "category",
+                  key: "brand-list",
                   icon: <TbBrandAdobe className="fs-5" />,
                   label: "Brand List",
                 },
@@ -114,7 +114,7 @@ const MainLayout = () => {
               label: "Blogs",
               children: [
                 {
-                  key: "blog",
+                  key: "blog-add",
                   icon: <FaBlog className="fs-5" />,
                   label: "Add Blog",
                 },

@@ -5,6 +5,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  overflow-y: hidden;
 }
 .trigger {
   padding: 0 24px;
@@ -50,8 +51,13 @@ body {
 .ant-layout-sider-collapsed .lg-logo {
   display: none;
 }
-.main {
+main {
   overflow-y: scroll;
+  background-color: transparent !important;
+  height: 85vh;
+}
+main::-webkit-scrollbar {
+  width: 0px;
 }
 .ant-menu-title-content {
   font-size: 16px;
