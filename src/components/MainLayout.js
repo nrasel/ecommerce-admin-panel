@@ -15,10 +15,11 @@ import {
   FaMicroblog,
 } from "react-icons/fa";
 import { ImBlogger2 } from "react-icons/im";
+import { IoIosNotifications } from "react-icons/io";
 import { RiQuestionFill } from "react-icons/ri";
 import { SiBloglovin } from "react-icons/si";
 import { TbBrandAdobe } from "react-icons/tb";
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
@@ -144,6 +145,7 @@ const MainLayout = () => {
       </Sider>
       <Layout className="site-layout">
         <Header
+          className="justify-content-between d-flex ps-3 pe-5"
           style={{
             padding: 0,
           }}
@@ -155,6 +157,32 @@ const MainLayout = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
+          <div className="d-flex gap-3 align-items-center justify-content-center">
+            <div className="position-relative">
+              <IoIosNotifications className="fs-4" />
+              <span className="badge bg-warning position-absolute rounded-circle p-1">
+                3
+              </span>
+            </div>
+            <div className="d-flex gap-3 align-items-center">
+              <div>
+                <img
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "50%",
+                  }}
+                  className="img-fluid"
+                  src="/images/user.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h5 className="mb-0">Naimur</h5>
+                <p className="mb-0">rnaimur313@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </Header>
         <Content
           style={{
@@ -165,7 +193,7 @@ const MainLayout = () => {
             borderRadius: "3px",
           }}
         >
-          Content
+          <Outlet />
         </Content>
       </Layout>
     </Layout>
