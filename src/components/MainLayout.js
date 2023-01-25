@@ -7,19 +7,20 @@ import {
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
-import { BiCategoryAlt } from "react-icons/bi";
+import { BiCategoryAlt, BiCoinStack } from "react-icons/bi";
 import {
   FaBlog,
   FaBloggerB,
   FaClipboardList,
   FaMicroblog,
 } from "react-icons/fa";
+import { HiClipboardList } from "react-icons/hi";
 import { ImBlogger2 } from "react-icons/im";
 import { IoIosNotifications } from "react-icons/io";
 import { RiQuestionFill } from "react-icons/ri";
 import { SiBloglovin } from "react-icons/si";
 import { TbBrandAdobe } from "react-icons/tb";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
@@ -57,7 +58,7 @@ const MainLayout = () => {
             },
             {
               key: "Catalog",
-              icon: <AiOutlineShoppingCart className="fs-5" />,
+              icon: <BiCoinStack className="fs-5" />,
               label: "Catalog",
               children: [
                 {
@@ -67,7 +68,7 @@ const MainLayout = () => {
                 },
                 {
                   key: "product-list",
-                  icon: <AiOutlineShoppingCart className="fs-5" />,
+                  icon: <HiClipboardList className="fs-5" />,
                   label: "Product List",
                 },
                 {
@@ -78,7 +79,7 @@ const MainLayout = () => {
 
                 {
                   key: "brand-list",
-                  icon: <TbBrandAdobe className="fs-5" />,
+                  icon: <HiClipboardList className="fs-5" />,
                   label: "Brand List",
                 },
                 {
@@ -88,7 +89,7 @@ const MainLayout = () => {
                 },
                 {
                   key: "list-category",
-                  icon: <BiCategoryAlt className="fs-5" />,
+                  icon: <HiClipboardList className="fs-5" />,
                   label: "Category List",
                 },
                 {
@@ -98,7 +99,7 @@ const MainLayout = () => {
                 },
                 {
                   key: "list-color",
-                  icon: <AiOutlineBgColors className="fs-5" />,
+                  icon: <HiClipboardList className="fs-5" />,
                   label: "Color List",
                 },
               ],
@@ -164,8 +165,15 @@ const MainLayout = () => {
                 3
               </span>
             </div>
-            <div className="d-flex gap-3 align-items-center">
-              <div>
+            <div
+              className="d-flex  align-items-center dropdown"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div className="me-0">
                 <img
                   style={{
                     width: "60px",
@@ -177,16 +185,35 @@ const MainLayout = () => {
                   alt=""
                 />
               </div>
-              <div>
+              <div className="">
                 <h5 className="mb-0">Naimur</h5>
                 <p className="mb-0">rnaimur313@gmail.com</p>
+              </div>
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                  <Link
+                    style={{ height: "auto", lineHeight: "20px" }}
+                    to="/"
+                    className="dropdown-item "
+                  >
+                    View Profile
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    style={{ height: "auto", lineHeight: "20px" }}
+                    to="/"
+                    className="dropdown-item"
+                  >
+                    Sign Out
+                  </Link>
+                </li>
               </div>
             </div>
           </div>
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
             padding: 24,
             minHeight: 280,
             background: "white",

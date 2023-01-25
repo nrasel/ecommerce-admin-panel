@@ -2,6 +2,11 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./components/MainLayout";
 import AddBlog from "./pages/AddBlog";
+import AddBlogCat from "./pages/AddBlogCat";
+import AddBrand from "./pages/AddBrand";
+import AddCat from "./pages/AddCat";
+import AddColor from "./pages/AddColor";
+import AddProduct from "./pages/AddProduct";
 import BlogCatList from "./pages/BlogCatList";
 import BlogList from "./pages/BlogList";
 import BrandList from "./pages/BrandList";
@@ -35,6 +40,11 @@ function App() {
           <Route path="brand-list" element={<BrandList />} />
           <Route path="product-list" element={<ProductList />} />
           <Route path="blog-add" element={<AddBlog />} />
+          <Route path="blog-category" element={<AddBlogCat />} />
+          <Route path="color" element={<AddColor />} />
+          <Route path="category" element={<AddCat />} />
+          <Route path="brand" element={<AddBrand />} />
+          <Route path="product" element={<AddProduct />} />
         </Route>
       </Routes>
     </Router>
